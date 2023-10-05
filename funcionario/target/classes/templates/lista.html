@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Listagem</title>
+</head>
+<body>
+    <input type="button" value='Voltar' class="botao" onclick="history.back()">
+    <form method="GET" action="/home">
+        <input type="submit" value="Início" class="botao" style="margin-top: 0;">
+    </form>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Login</th>
+                <th>Senha</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-th-each="f: ${funcionarios}">
+                <td data-th-text="${f.Id}"></td>
+                <td data-th-text="${f.nome}"></td>
+                <td data-th-text="${f.cpf}"></td>
+                <td data-th-text="${f.login}"></td>
+                <td data-th-text="${f.senha}"></td>
+                <td><a th:href="@{'/funcionario/excluir/' +${f.id}}">Excluir</a></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

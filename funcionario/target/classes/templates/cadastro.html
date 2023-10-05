@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fazer Cadastro</title>
+</head>
+<body>
+    <input type="button" value='Voltar' class="botao" onclick="history.back()">
+    <form method="GET" action="/home">
+        <input type="submit" value="Início" class="botao" style="margin-top: 0;">
+    </form>
+    <hr>
+    <fieldset><legend><h1>Cadastrar Funcionário</h1></legend>
+        <form method="POST" action="/cadastro/funcionario">
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome" id="nome">
+            <hr>
+            <label for="cpf">CPF: </label>
+            <input type="text" name="cpf" id="cpf">
+            <hr>
+            <label for="login">Login: </label>
+            <input type="email" name="login" id="login">
+            <hr>
+            <label for="senha">Senha: </label>
+            <input type="password" name="senha" id="senha">
+            <hr>
+            <input type="submit" value="Salvar" class="botao">
+        </form>
+    </fieldset>
+    <hr>
+    <form method="POST" action="/login">
+        <input type="submit" value="Já possuo uma conta" class="botao" style="margin-top: 0;">
+    </form>
+</body>
+</html>
